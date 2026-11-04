@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Marzia 🤍</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: Georgia, serif;
+    color: #fff4ed;
+    background:
+    radial-gradient(circle at top left, #592c70, transparent 40%),
+    radial-gradient(circle at bottom right, #6b234f, transparent 40%),
+    linear-gradient(135deg, #100b20, #21102f, #101a32);
+}
+
+.card {
+    width: 100%;
+    max-width: 650px;
+    padding: 45px 28px;
+    text-align: center;
+    border: 1px solid #e9c77b88;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.07);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 20px 60px #0008;
+    animation: appear 0.8s ease;
+}
+
+@keyframes appear {
+    from {opacity:0; transform:translateY(20px);}
+    to {opacity:1; transform:translateY(0);}
+}
+
+h1 {
+    font-size: clamp(34px, 8vw, 52px);
+    font-weight: normal;
+    margin: 20px 0;
+    color: #f4d58d;
+}
+
+h2 {
+    color: #f4d58d;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 22px;
+}
+
+.gold {
+    color: #f4d58d;
+    font-style: italic;
+}
+
+.label {
+    color: #f4d58d;
+    letter-spacing: 4px;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+button {
+    padding: 14px 32px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(110deg,#f4d58d,#e9a9c7);
+    color: #26132d;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px #e9a9c755;
+}
+
+.page {
+    display: none;
+    animation: appear 0.7s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+.compliment {
+    padding: 16px;
+    margin: 12px 0;
+    border: 1px solid #ffffff25;
+    border-radius: 15px;
+    background: #ffffff0b;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.count {
+    font-size: 100px;
+    color: #f4d58d;
+    margin: 25px;
+}
+
+.emojis {
+    font-size: 35px;
+    margin: 25px 0;
+    letter-spacing: 5px;
+}
+
+.footer {
+    color: #d8c4d8;
+    font-size: 12px;
+    margin-top: 25px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<!-- PAGE 1 -->
+
+<div class="page active" id="page1">
+
+<div class="label">A little appreciation</div>
+
+<h1>For Marzia 🤍</h1>
+
+<p>
+Some people have a beautiful way of making ordinary moments
+feel special. Marzia, your beauty is something that deserves
+to be appreciated, not just because of your appearance,
+but also because of the grace, kindness and individuality
+you carry.
+</p>
+
+<p>
+There is something genuinely lovely about the way you
+present yourself and the person you continue to become.
+Your presence, your smile and your personality make you
+someone worth appreciating.
+</p>
+
+<p class="gold">
+May Allah always protect you, bring peace to your heart
+and bless you with beautiful moments.
+</p>
+
+<button onclick="nextPage(2)">NEXT →</button>
+
+</div>
+
+
+<!-- PAGE 2 -->
+
+<div class="page" id="page2">
+
+<div class="label">Three little compliments</div>
+
+<h1>Things about you ✨</h1>
+
+<div class="compliment">
+🌷 Your smile has a beautiful way of brightening the atmosphere.
+</div>
+
+<div class="compliment">
+🤍 Your presence has a gentle and graceful charm.
+</div>
+
+<div class="compliment">
+✨ Your dedication and determination deserve genuine appreciation.
+</div>
+
+<button onclick="nextPage(3)">NEXT →</button>
+
+</div>
+
+
+<!-- PAGE 3 -->
+
+<div class="page" id="page3">
+
+<div class="label">A few beautiful details</div>
+
+<h1>Your Natural Beauty 🌙</h1>
+
+<div class="compliment">
+👀 <b>Your Eyes</b><br>
+Your eyes have a gentle expression that makes them memorable.
+</div>
+
+<div class="compliment">
+🌷 <b>Your Smile & Lips</b><br>
+Your smile adds warmth to your entire appearance.
+</div>
+
+<div class="compliment">
+✨ <b>Your Hair</b><br>
+Your hair frames your face beautifully and adds to your natural charm.
+</div>
+
+<div class="compliment">
+🦋 <b>Your Nose</b><br>
+Another lovely detail that makes your features uniquely yours.
+</div>
+
+<button onclick="nextPage(4)">NEXT →</button>
+
+</div>
+
+
+<!-- PAGE 4 -->
+
+<div class="page" id="page4">
+
+<div class="label">A special announcement</div>
+
+<h1>The Best Girl Award</h1>
+
+<div class="emojis">🌙 ✨ 🏆 ✨ 🌙</div>
+
+<p>
+And the award for someone who deserves
+a little extra appreciation goes to...
+</p>
+
+<button onclick="startCountdown()">REVEAL THE WINNER →</button>
+
+</div>
+
+
+<!-- PAGE 5 -->
+
+<div class="page" id="page5">
+
+<div class="label">The moment is here</div>
+
+<h2>And the winner is...</h2>
+
+<div class="count" id="count">10</div>
+
+<p class="gold">A little surprise is waiting for you. 🤍</p>
+
+</div>
+
+
+<!-- PAGE 6 -->
+
+<div class="page" id="page6">
+
+<div class="label">The winner has been announced</div>
+
+<h1>MARZIA! 🏆</h1>
+
+<div class="emojis">
+💐 🌙 🤍 ✨ 🦋 🌷
+</div>
+
+<h2>BEST GIRL AWARD</h2>
+
+<p>
+For being wonderfully and unapologetically yourself.
+</p>
+
+<p>
+May Allah bless you with genuine happiness, protect you
+through every difficult day, guide you towards what is best
+and grant you success in everything good you work for.
+</p>
+
+<p class="gold">
+You deserve kindness, respect and peace. Always. 🤍
+</p>
+
+<div class="emojis">
+🌸 🦋 💗 🌙 ✨
+</div>
+
+<button onclick="nextPage(1)">READ AGAIN ↻</button>
+
+<div class="footer">
+A little appreciation page, made for Marzia.
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+function nextPage(number) {
+
+    document.querySelectorAll(".page").forEach(page => {
+        page.classList.remove("active");
+    });
+
+    document.getElementById("page" + number).classList.add("active");
+
+}
+
+let timer;
+
+function startCountdown() {
+
+    nextPage(5);
+
+    let number = 10;
+
+    document.getElementById("count").innerText = number;
+
+    timer = setInterval(function() {
+
+        number--;
+
+        document.getElementById("count").innerText = number;
+
+        if(number === 0) {
+
+            clearInterval(timer);
+
+            setTimeout(function() {
+                nextPage(6);
+            }, 700);
+
+        }
+
+    }, 1000);
+
+}
+
+</script>
+
+</body>
+</html>
